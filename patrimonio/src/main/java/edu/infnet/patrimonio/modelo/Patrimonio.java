@@ -11,7 +11,7 @@ public class Patrimonio {
 	@GeneratedValue
 	private Integer id;
 	
-	private Integer identificacao;
+	private String identificacao;
 	
 	private String nome;
 	
@@ -22,7 +22,7 @@ public class Patrimonio {
 	}
 	
 	
-	public Patrimonio(Integer id, Integer identificacao, String nome, String local) {
+	public Patrimonio(Integer id, String identificacao, String nome, String local) {
 		super();
 		this.id = id;
 		this.identificacao = identificacao;
@@ -33,7 +33,7 @@ public class Patrimonio {
 
 
 	public Patrimonio(String identificacao, String nome, String local) {
-		this.identificacao = Integer.parseInt(identificacao);
+		this.identificacao = identificacao;
 		this.nome = nome;
 		this.local = local;
 		
@@ -50,12 +50,12 @@ public class Patrimonio {
 	}
 
 
-	public Integer getIdentificacao() {
+	public String getIdentificacao() {
 		return identificacao;
 	}
 
 
-	public void setIdentificacao(Integer identificacao) {
+	public void setIdentificacao(String identificacao) {
 		this.identificacao = identificacao;
 	}
 
@@ -81,7 +81,7 @@ public class Patrimonio {
 	
 	@Override
 	public String toString() {
-		return "Patrimonio [id=" + id + ", identificacao="+ identificacao + ", nome="+ nome +", local="+ local +"]";
+		return "Patrimonio [id="+ id +", identificacao="+ identificacao + ", nome="+ nome +", local="+ local +"]";
 	}
 	
 	
