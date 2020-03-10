@@ -28,7 +28,13 @@ public class PatrimonioService {
 		return dao.edit(patrimonio);
 	}
 	
-	public Boolean excluirPatrimonio(Patrimonio patrimonio) {
+	public Patrimonio buscarID(Integer id) {
+		return dao.find(id);
+	}
+	
+	public Boolean excluirPatrimonio(Integer id) {
+		
+		Patrimonio patrimonio = this.buscarID(id);
 		return dao.delete(patrimonio);
 	}
 	

@@ -18,6 +18,7 @@
                 <th>Identificação</th>
                 <th>Patrimonio</th>
                 <th>Local</th>
+                <th>Opção</th>
             </tr>            
         </thead>
         <tbody>
@@ -26,7 +27,13 @@
         <tr>        
         <td>${patrimonio.identificacao}</td>
         <td>${patrimonio.nome}</td>
-        <td>${patrimonio.local}</td>   
+        <td>${patrimonio.local}</td>  
+        <td>
+        <a type="button" class="btn btn-info" href='<c:url value="EditPatrimonioSrv?id=${patrimonio.id}"></c:url>'>Editar</a>
+        <a type="button" class="btn btn-danger" href='<c:url value="delete?id=${patrimonio.id}"></c:url>'>Excluir</a>
+        
+        
+        </td> 
         
         
         
